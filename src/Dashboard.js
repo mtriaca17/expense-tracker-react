@@ -1,20 +1,25 @@
 import React, { useState } from 'react';
 import ExpenseForm from './ExpenseForm';
 import ExpenseList from './ExpenseList';
+import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/styles';
+import { flexbox } from '@material-ui/system';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 const styles = {
   root: {
-    height: '90vh',
-    width: '60vw',
+    height: '100%',
+    width: '100%',
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
     gap: '15px',
-    paddingTop: '25px',
-    borderRadius: '10px',
-    border: '1px solid dodgerblue',
+    padding: '20px',
+  },
+  paper: {
+    padding: '10px',
   },
 };
 
@@ -33,8 +38,18 @@ function Dashboard(props) {
 
   return (
     <div className={props.classes.root}>
-      <ExpenseForm createExpense={createExpense} />
-      <ExpenseList expenses={expenses} deleteExpense={deleteExpense} />
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Paper elevation={3}>
+            <ExpenseForm createExpense={createExpense} />
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Paper elevation={3}>
+            <ExpenseList expenses={expenses} deleteExpense={deleteExpense} />
+          </Paper>
+        </Grid>
+      </Grid>
     </div>
   );
 }
