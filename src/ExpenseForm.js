@@ -15,8 +15,13 @@ const styles = {
     gap: '20px',
     // border: '1px solid blue',
     padding: '20px',
+    backgroundColor: '#d9e4ec',
+    boxShadow: '0 3px 15px 2px rgba(255,255,255,0.51)',
     '& input': {
       // width: '100%',
+      backgroundColor: 'white',
+      overflow: 'hidden',
+      borderRadius: '5px',
     },
     '& .control': {
       width: '100%',
@@ -28,6 +33,12 @@ const styles = {
     '& .btn': {
       alignSelf: 'center',
       width: '30%',
+      backgroundColor: 'white',
+      border: '3px solid #6aabd2',
+      '&:hover': {
+        transform: 'scale(1.05)',
+        transition: 'all .3s ease',
+      },
     },
     '@media(max-width: 600px)': {
       fontSize: '1rem',
@@ -70,12 +81,12 @@ function ExpenseForm(props) {
       <div className="control">
         <label htmlFor="description">Description: </label>
         {/* <input
-          type="text"
-          name="description"
-          id="description"
-          value={expense.description}
-          onChange={handleChange}
-        /> */}
+  type="text"
+  name="description"
+  id="description"
+  value={expense.description}
+  onChange={handleChange}
+/> */}
         <TextField
           type="text"
           name="description"
@@ -91,12 +102,12 @@ function ExpenseForm(props) {
       <div className="control">
         <label htmlFor="amount">Amount: </label>
         {/* <input
-          type="text"
-          name="amount"
-          id="amount"
-          value={expense.amount}
-          onChange={handleChange}
-        /> */}
+  type="text"
+  name="amount"
+  id="amount"
+  value={expense.amount}
+  onChange={handleChange}
+/> */}
         <TextField
           type="number"
           name="amount"

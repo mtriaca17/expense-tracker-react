@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import ExpenseForm from './ExpenseForm';
 import ExpenseList from './ExpenseList';
-import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/styles';
-import { flexbox } from '@material-ui/system';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 

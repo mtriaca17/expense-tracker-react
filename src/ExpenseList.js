@@ -2,9 +2,11 @@ import React from 'react';
 import Expense from './Expense';
 import { withStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const styles = {
+  // table: {
+  //   minWidth: 650,
+  // },
   ExpenseList: {
     width: '100%',
     minHeight: '100%',
@@ -12,8 +14,9 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    // border: '1px solid red',
     padding: '10px',
+    backgroundColor: '#d9e4ec',
+    boxShadow: '0 3px 15px 2px rgba(255,255,255,0.51)',
   },
   ExpenseListHeader: {
     '@media(max-width: 600px)': {

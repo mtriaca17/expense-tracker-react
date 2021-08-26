@@ -11,6 +11,7 @@ const styles = {
     paddingTop: '20px',
   },
   AppTitle: {
+    color: 'white',
     '@media(max-width: 600px)': {
       fontSize: '2rem',
     },
